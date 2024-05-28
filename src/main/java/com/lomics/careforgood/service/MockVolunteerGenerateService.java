@@ -20,18 +20,36 @@ public class MockVolunteerGenerateService {
   public void generateVolunteers() {
 
     Volunteer volunteer1 = Volunteer.builder()
-              .id(volunteerIdGenerationService.newVolunteerId())
+              .id((long) 1)
+              // .id(volunteerIdGenerationService.newVolunteerId())
               .experience(new BigDecimal(100))
               .name("Tom Sawyer")
               .build();
     volunteerRepository.save(volunteer1);
 
     Volunteer volunteer2 = Volunteer.builder()
-              .id(volunteerIdGenerationService.newVolunteerId())
+              .id((long) 2)
+              // .id(volunteerIdGenerationService.newVolunteerId())
               .experience(new BigDecimal(200))
               .name("Annie Blyton")
               .build();
     volunteerRepository.save(volunteer2);
 
+    Volunteer volunteer3 = Volunteer.builder()
+              .id((long) 3)
+              // .id(volunteerIdGenerationService.newVolunteerId())
+              .experience(new BigDecimal(300))
+              .name("George Orwell")
+              .build();
+    volunteerRepository.save(volunteer3);
+
+    Volunteer volunteer4 = Volunteer.builder()
+              .id((long) 4)
+              // .id(volunteerIdGenerationService.newVolunteerId())
+              .experience(new BigDecimal(400))
+              .name("Huckerberry Flynn")
+              .build();
+    volunteerRepository.save(volunteer4);
+    
   }
 }
